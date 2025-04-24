@@ -21,7 +21,7 @@ export const MessageStyled = styled.div<{ $isBot: boolean }>`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 8px;
+  padding: 8px 12px;
 `;
 
 export const UsernameTextStyled = styled.div<{ $isBot: boolean }>`

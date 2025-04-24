@@ -7,6 +7,7 @@ export interface UserProfileInterface {
 }
 
 export interface ChannelInterface {
+  id: string;
   name: string;
   messages: ChatMessageInterface[];
 }
