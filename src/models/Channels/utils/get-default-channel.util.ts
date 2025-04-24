@@ -1,4 +1,5 @@
 import { LocalStorageKeys } from '@src/constants';
+import { ChatMessagesModel } from '@src/models/ChatMessages';
 import { ChannelInterface } from '@src/types';
 import ls from 'localstorage-slim';
 
@@ -13,7 +14,7 @@ export const getDefaultChannels = (): ChannelInterface[] => {
     {
       id: crypto.randomUUID(),
       name: 'default',
-      messages: [],
+      messages: new ChatMessagesModel(),
     },
   ];
 };
