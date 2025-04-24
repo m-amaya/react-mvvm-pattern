@@ -1,8 +1,8 @@
 import { LocalStorageKeys } from '../../constants';
 import { RoleType } from '../../types';
-import { getDefaultUser } from './get-default-user.util';
+import { getDefaultProfile } from './get-default-profile.util';
 
-describe(getDefaultUser.name, () => {
+describe(getDefaultProfile.name, () => {
   const getItemSpy = vi.spyOn(Storage.prototype, 'getItem');
 
   afterEach(() => {
@@ -19,7 +19,7 @@ describe(getDefaultUser.name, () => {
       role,
     };
 
-    const result = getDefaultUser(role);
+    const result = getDefaultProfile(role);
 
     expect(result).toEqual(expected);
   });
@@ -34,7 +34,7 @@ describe(getDefaultUser.name, () => {
       role,
     };
 
-    const result = getDefaultUser(role);
+    const result = getDefaultProfile(role);
 
     expect(result).toEqual(expected);
     expect(getItemSpy).toHaveBeenCalledExactlyOnceWith(
@@ -54,7 +54,7 @@ describe(getDefaultUser.name, () => {
       role,
     };
 
-    const result = getDefaultUser(role);
+    const result = getDefaultProfile(role);
 
     expect(result).toEqual(expected);
   });
@@ -69,7 +69,7 @@ describe(getDefaultUser.name, () => {
       role,
     };
 
-    const result = getDefaultUser(role);
+    const result = getDefaultProfile(role);
 
     expect(result).toEqual(expected);
     expect(getItemSpy).toHaveBeenCalledExactlyOnceWith(

@@ -1,9 +1,9 @@
 import { signal } from '@preact/signals-core';
 import { LocalStorageKeys } from '../../constants';
 import { UserProfileInterface } from '../../types';
-import { setUserNameAction } from './set-user-name-action.util';
+import { setProfileNameAction } from './set-profile-name-action.util';
 
-describe(setUserNameAction.name, () => {
+describe(setProfileNameAction.name, () => {
   const setItemSpy = vi.spyOn(Storage.prototype, 'setItem');
 
   afterEach(() => {
@@ -18,7 +18,7 @@ describe(setUserNameAction.name, () => {
       role: 'user',
     });
 
-    setUserNameAction(user, 'new-name');
+    setProfileNameAction(user, 'new-name');
 
     expect(user.value.name).toBe('new-name');
     expect(setItemSpy).toHaveBeenCalledExactlyOnceWith(
@@ -35,7 +35,7 @@ describe(setUserNameAction.name, () => {
       role: 'chatbot',
     });
 
-    setUserNameAction(user, 'new-name');
+    setProfileNameAction(user, 'new-name');
 
     expect(user.value.name).toBe('new-name');
     expect(setItemSpy).toHaveBeenCalledExactlyOnceWith(

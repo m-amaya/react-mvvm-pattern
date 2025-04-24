@@ -1,31 +1,34 @@
 import { computed, ReadonlySignal, signal, Signal } from '@preact/signals-core';
 import { RoleType, UserProfileInterface } from '../../types';
-import { getDefaultUser } from './get-default-user.util';
-import { setUserNameAction } from './set-user-name-action.util';
+import { getDefaultProfile } from './get-default-profile.util';
+import { setProfileNameAction } from './set-profile-name-action.util';
 
-export class UserModel {
-  // Private state
-  private readonly _user: Signal<UserProfileInterface>;
+export type UserProfileModelInterface = InstanceType<typeof UserProfileModel>;
 
-  private readonly _userName: ReadonlySignal<string> = computed(
-    () => this._user.value.name
+export class UserProfileModel {
+  // Private signal store
+  private readonly _profile: Signal<UserProfileInterface>;
+
+  private readonly _profileName: ReadonlySignal<string> = computed(
+    () => this._profile.value.name
   );
 
   constructor(role: RoleType) {
-    this._user = signal(getDefaultUser(role));
+    this._profile = signal(getDefaultProfile(role));
   }
 
   // Getters
-  public get user(): ReadonlySignal<UserProfileInterface | undefined> {
-    return this._user;
+  public get profile(): ReadonlySignal<UserProfileInterface> {
+    return this._profile;
   }
 
-  public get userName(): ReadonlySignal<string | undefined> {
-    return this._userName;
+  public get profileName(): ReadonlySignal<string> {
+    return this._profileName;
   }
 
   // Actions
-  public setUserName(name: string): void {
-    setUserNameAction(this._user, name);
+  public setProfileName(name: string): void {
+    console.log('setProfileName', name, this._profile);
+    setProfileNameAction(this._profile, name);
   }
 }

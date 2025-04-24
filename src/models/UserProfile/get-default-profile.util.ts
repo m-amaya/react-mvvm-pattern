@@ -3,13 +3,13 @@ import { generateUsername } from 'unique-username-generator';
 import { LocalStorageKeys } from '../../constants';
 import { RoleType, UserProfileInterface } from '../../types';
 
-export const getDefaultUser = (role: RoleType): UserProfileInterface => {
+export const getDefaultProfile = (role: RoleType): UserProfileInterface => {
   if (role === 'user') {
     const lsUserName = ls.get<string>(LocalStorageKeys.USER_NAME);
 
     return {
       avatar: '👤',
-      name: lsUserName ?? generateUsername('-'),
+      name: lsUserName || generateUsername('-'),
       role: 'user',
     };
   }
@@ -19,7 +19,7 @@ export const getDefaultUser = (role: RoleType): UserProfileInterface => {
 
     return {
       avatar: '🤖',
-      name: lsUserName ?? generateUsername('-'),
+      name: lsUserName || generateUsername('-'),
       role: 'chatbot',
     };
   }

@@ -3,14 +3,14 @@ import ls from 'localstorage-slim';
 import { LocalStorageKeys } from '../../constants';
 import { UserProfileInterface } from '../../types';
 
-export const setUserNameAction = (
-  user: Signal<UserProfileInterface>,
+export const setProfileNameAction = (
+  profile: Signal<UserProfileInterface>,
   name: string
 ) => {
   const lsKey =
-    user.value.role === 'user'
+    profile.value.role === 'user'
       ? LocalStorageKeys.USER_NAME
       : LocalStorageKeys.CHATBOT_NAME;
   ls.set(lsKey, name);
-  user.value.name = name;
+  profile.value.name = name;
 };
