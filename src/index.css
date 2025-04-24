@@ -1,0 +1,46 @@
+:root {
+  --background-color: #242424;
+  --background-color-hover: rgba(255, 255, 255, 0.05);
+  --background-color-active: rgba(255, 255, 255, 0.1);
+  --border-color: rgb(68, 68, 68);
+  --border-radius: 4px;
+  --color-primary: rgb(5, 195, 221);
+  --color-user: rgb(225, 93, 210);
+  --color-chatbot: rgb(172, 212, 102);
+  --font-color: rgba(255, 255, 255, 0.87);
+  --font-color-secondary: rgba(255, 255, 255, 0.54);
+  --window-height: 500px;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--font-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+}
+
+#root {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
