@@ -1,7 +1,7 @@
 import { Signal } from '@preact/signals-core';
+import { LocalStorageKeys } from '@src/constants';
+import { UserProfileInterface } from '@src/types';
 import ls from 'localstorage-slim';
-import { LocalStorageKeys } from '../../constants';
-import { UserProfileInterface } from '../../types';
 
 export const setProfileNameAction = (
   profile: Signal<UserProfileInterface>,

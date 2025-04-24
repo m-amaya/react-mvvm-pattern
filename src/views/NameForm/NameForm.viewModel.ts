@@ -1,7 +1,7 @@
+import { useSignalValue } from '@src/hooks/useSignalValue';
+import { UserProfileModelInterface } from '@src/models/UserProfile';
+import { RootContext } from '@src/Root.context';
 import { useContext } from 'react';
-import { useSignalValue } from '../../hooks/useSignalValue';
-import { RootContext } from '../../models/Root.context';
-import { UserProfileModelInterface } from '../../models/UserProfile';
 
 export type NameFormViewModelInterface = {
   botName: string;

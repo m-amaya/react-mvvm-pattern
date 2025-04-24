@@ -1,5 +1,5 @@
-import { ButtonStyled } from '../../components/Button';
-import { InputStyled } from '../../components/Input';
+import { ButtonStyled } from '@src/components/Button';
+import { InputStyled } from '@src/components/Input';
 import {
   ChannelNavStyled,
   ChannelTabStyled,

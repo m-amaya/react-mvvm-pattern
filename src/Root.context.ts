@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { UserProfileModel } from './UserProfile';
+import { UserProfileModel } from './models/UserProfile';
 
 const user = new UserProfileModel('user');
 const chatbot = new UserProfileModel('chatbot');

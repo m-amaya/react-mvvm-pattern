@@ -1,6 +1,6 @@
+import { defaultRootContext, RootProvider } from '@src/Root.context';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import { defaultRootContext, RootProvider } from '../../models/Root.context';
 import { NameForm } from './NameForm';
 
 describe(NameForm.name, () => {

@@ -1,7 +1,7 @@
 import { computed, ReadonlySignal, signal, Signal } from '@preact/signals-core';
-import { RoleType, UserProfileInterface } from '../../types';
-import { getDefaultProfile } from './get-default-profile.util';
-import { setProfileNameAction } from './set-profile-name-action.util';
+import { RoleType, UserProfileInterface } from '@src/types';
+import { getDefaultProfile } from './utils/get-default-profile.util';
+import { setProfileNameAction } from './utils/set-profile-name-action.util';
 
 export type UserProfileModelInterface = InstanceType<typeof UserProfileModel>;
 

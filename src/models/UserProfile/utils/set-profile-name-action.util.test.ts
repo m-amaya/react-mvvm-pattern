@@ -1,6 +1,6 @@
 import { signal } from '@preact/signals-core';
-import { LocalStorageKeys } from '../../constants';
-import { UserProfileInterface } from '../../types';
+import { LocalStorageKeys } from '@src/constants';
+import { UserProfileInterface } from '@src/types';
 import { setProfileNameAction } from './set-profile-name-action.util';
 
 describe(setProfileNameAction.name, () => {

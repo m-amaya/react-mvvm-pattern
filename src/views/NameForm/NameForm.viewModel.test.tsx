@@ -1,6 +1,6 @@
+import { defaultRootContext, RootProvider } from '@src/Root.context';
 import { renderHook } from '@testing-library/react';
 import { FunctionComponent, ReactNode } from 'react';
-import { RootProvider, defaultRootContext } from '../../models/Root.context';
 import {
   NameFormViewModelInterface,
   useNameFormViewModel,

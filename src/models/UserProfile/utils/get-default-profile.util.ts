@@ -1,7 +1,7 @@
+import { LocalStorageKeys } from '@src/constants';
+import { RoleType, UserProfileInterface } from '@src/types';
 import ls from 'localstorage-slim';
 import { generateUsername } from 'unique-username-generator';
-import { LocalStorageKeys } from '../../constants';
-import { RoleType, UserProfileInterface } from '../../types';
 
 export const getDefaultProfile = (role: RoleType): UserProfileInterface => {
   if (role === 'user') {

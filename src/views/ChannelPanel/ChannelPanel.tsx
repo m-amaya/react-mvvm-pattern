@@ -1,6 +1,6 @@
-import { ButtonStyled } from '../../components/Button';
-import { ChatMessage } from '../../components/ChatMessage';
-import { InputStyled } from '../../components/Input';
+import { ButtonStyled } from '@src/components/Button';
+import { ChatMessage } from '@src/components/ChatMessage';
+import { InputStyled } from '@src/components/Input';
 import {
   ChannelTitleBarStyled,
   ChatMessageBoxStyled,

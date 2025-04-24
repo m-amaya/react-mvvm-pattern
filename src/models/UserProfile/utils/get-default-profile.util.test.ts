@@ -1,5 +1,5 @@
-import { LocalStorageKeys } from '../../constants';
-import { RoleType } from '../../types';
+import { LocalStorageKeys } from '@src/constants';
+import { RoleType } from '@src/types';
 import { getDefaultProfile } from './get-default-profile.util';
 
 describe(getDefaultProfile.name, () => {

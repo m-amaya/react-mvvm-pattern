@@ -1,5 +1,5 @@
+import { InputStyled } from '@src/components/Input';
 import { ChangeEventHandler, useState } from 'react';
-import { InputStyled } from '../../components/Input';
 import { FieldsetStyled, LabelStyled, RootStyled } from './NameForm.styled';
 import { useNameFormViewModel } from './NameForm.viewModel';
 

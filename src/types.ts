@@ -1,3 +1,5 @@
+import { Signal } from '@preact/signals-core';
+
 export type RoleType = 'user' | 'chatbot';
 
 export interface UserProfileInterface {
@@ -9,7 +11,7 @@ export interface UserProfileInterface {
 export interface ChannelInterface {
   id: string;
   name: string;
-  messages: ChatMessageInterface[];
+  messages: Signal<ChatMessageInterface>;
 }
 
 export interface ChatMessageInterface {
