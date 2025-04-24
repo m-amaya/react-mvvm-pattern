@@ -5,7 +5,7 @@ export const RootStyled = styled.div`
   display: flex;
   flex-direction: column;
   height: var(--window-height);
-  width: 200px;
+  width: 250px;
 `;
 
 export const SearchCellStyled = styled.div`

@@ -28,7 +28,6 @@ export class UserProfileModel {
 
   // Actions
   public setProfileName(name: string): void {
-    console.log('setProfileName', name, this._profile);
     setProfileNameAction(this._profile, name);
   }
 }

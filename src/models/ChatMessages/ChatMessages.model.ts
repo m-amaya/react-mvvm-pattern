@@ -5,9 +5,11 @@ export type ChatMessagesModelInterface = InstanceType<typeof ChatMessagesModel>;
 
 export class ChatMessagesModel {
   // Private signal store
+  private readonly _channelId: Signal<string>;
   private readonly _list: Signal<ChatMessageInterface[]>;
 
-  constructor() {
+  constructor(channelId: string) {
+    this._channelId = signal(channelId);
     this._list = signal([]);
   }
 

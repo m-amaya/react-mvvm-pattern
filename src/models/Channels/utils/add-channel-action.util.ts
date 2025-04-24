@@ -1,21 +1,18 @@
 import { Signal } from '@preact/signals-core';
 import { ChatMessagesModel } from '@src/models/ChatMessages';
 import { ChannelInterface } from '@src/types';
-import ls from 'localstorage-slim';
-import { LocalStorageKeys } from '../../../constants';
+import { generateUsername } from 'unique-username-generator';
 
-export const addChannelAction = (
-  channels: Signal<ChannelInterface[]>,
-  channelName: string
-) => {
+export const addChannelAction = (channels: Signal<ChannelInterface[]>) => {
+  const channelId = crypto.randomUUID();
+
   const newChannel: ChannelInterface = {
     id: crypto.randomUUID(),
-    name: channelName,
-    messages: new ChatMessagesModel(),
+    name: generateUsername('-', undefined, undefined, '#'),
+    messages: new ChatMessagesModel(channelId),
   };
 
   const updatedChannels = [...channels.value, newChannel];
 
   channels.value = updatedChannels;
-  ls.set(LocalStorageKeys.CHANNELS, updatedChannels);
 };

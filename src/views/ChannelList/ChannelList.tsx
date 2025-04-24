@@ -17,7 +17,7 @@ export const ChannelList = () => {
         <InputStyled $fullWidth placeholder='Search channels...' />
       </SearchCellStyled>
       <TitleCellStyled>
-        <TitleTextStyled>Channels</TitleTextStyled>
+        <TitleTextStyled>Channels (4)</TitleTextStyled>
         <ButtonStyled>Add</ButtonStyled>
       </TitleCellStyled>
       <ChannelNavStyled>
