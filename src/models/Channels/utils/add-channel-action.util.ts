@@ -8,7 +8,7 @@ export const addChannelAction = (channels: Signal<ChannelInterface[]>) => {
 
   const newChannel: ChannelInterface = {
     id: crypto.randomUUID(),
-    name: generateUsername('-', undefined, undefined, '#'),
+    name: `#${generateUsername('-')}`,
     messages: new ChatMessagesModel(channelId),
   };
 
